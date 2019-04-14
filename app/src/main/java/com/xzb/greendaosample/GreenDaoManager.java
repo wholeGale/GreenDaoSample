@@ -6,7 +6,6 @@ import com.xzb.greendaosample.constants.Constant;
 import com.xzb.greendaosample.model.entitys.DaoMaster;
 import com.xzb.greendaosample.model.entitys.DaoSession;
 import com.xzb.greendaosample.model.entitys.WeatherCityDao;
-import com.xzb.greendaosample.model.entitys.WheatherCityDao;
 
 /**
  * @Author: xiangzhenbiao

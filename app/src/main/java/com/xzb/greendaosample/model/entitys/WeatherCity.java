@@ -44,12 +44,14 @@ public class WeatherCity {
     //城市类型，0为国内，1为国外
     @Property(nameInDb = "city_type")
     private int cityType;
-    //注：构造方法和setter/getter方法为编译工程时，greenrobot根据注解自动生成
 
-    @Generated(hash = 974926254)
+    @Property(nameInDb = "city_pin_yin")
+    private String cityPinYin;
+
+    @Generated(hash = 1933828203)
     public WeatherCity(long id, @NotNull String country, @NotNull String province,
             @NotNull String city, String town, String areaCode, String latitude,
-            String longitude, int cityType) {
+            String longitude, int cityType, String cityPinYin) {
         this.id = id;
         this.country = country;
         this.province = province;
@@ -59,11 +61,29 @@ public class WeatherCity {
         this.latitude = latitude;
         this.longitude = longitude;
         this.cityType = cityType;
+        this.cityPinYin = cityPinYin;
     }
 
     @Generated(hash = 187543502)
     public WeatherCity() {
     }
+
+    @Override
+    public String toString() {
+        return "WeatherCity{" +
+                "id=" + id +
+                ", country='" + country + '\'' +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", town='" + town + '\'' +
+                ", areaCode='" + areaCode + '\'' +
+                ", latitude='" + latitude + '\'' +
+                ", longitude='" + longitude + '\'' +
+                ", cityType=" + cityType +
+                ", cityPinYin='" + cityPinYin + '\'' +
+                '}';
+    }
+    //注：构造方法和setter/getter方法为编译工程时，greenrobot根据注解自动生成
 
     public long getId() {
         return this.id;
@@ -136,5 +156,14 @@ public class WeatherCity {
     public void setCityType(int cityType) {
         this.cityType = cityType;
     }
+
+    public String getCityPinYin() {
+        return this.cityPinYin;
+    }
+
+    public void setCityPinYin(String cityPinYin) {
+        this.cityPinYin = cityPinYin;
+    }
+
 
 }
